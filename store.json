@@ -1,0 +1,28 @@
+{
+  "writers": [
+    {
+      "id": "ralph-waldo-emerson",
+      "name": "Ralph Waldo Emerson",
+      "born": "May 25, 1803",
+      "deceased": "April 27, 1882",
+      "description": "American essayist, leaturer, philosopher and poet who led the transcendentalist movement of the mid-19 th century. He was seen as a champion of individualism and a prescient critic of countervailing pressures of society.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Ralph_Waldo_Emerson_ca1857_retouched.jpg"
+    },
+    {
+      "id": "mark-twain",
+      "name": "Mark Twain",
+      "born": "November 30, 1835",
+      "deceased": "April 21, 1910",
+      "description": "Samuel Langhorne Clemens, better known by his pen name Mark Twain, was an American writer, humorist, entrepreneur, publisher, and lecturer. Among his novels are The Adventures of Tom Sawyer and its sequel, the Adventures of Huckleberry Finn, the latter often called",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Mark_Twain%2C_Brady-Handy_photo_portrait%2C_Feb_7%2C_1871%2C_cropped.jpg"
+    },
+    {
+      "id": "william-shakespeare",
+      "name": "William Shakespeare",
+      "born": "April 26, 1564",
+      "deceased": "April 23, 1616",
+      "description": "William Shakespeare was an English poet, playwright and actor, widely regarded as the greatest writer in the English language and the world's greatest dramatist. He is often called England's national poet and the 'Bard of Avon'",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Shakespeare.jpg"
+    }
+  ]
+}
