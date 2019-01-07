@@ -8,9 +8,11 @@ export default ({ match: {url}, writers }) =>
             {writers.map(({id, name}) => 
                 <li key={id}>
                     <Link to={`${url}/${id}`}>{name}</Link>
-                </li>    
+                </li>  
+                
             )}
         </ul>
+        <p>fuck</p>  
 
         <Route exact path={url} render={()=><h3>Please select one of writers above.</h3>} />
         <Route path={`${url}/:writerId`} render={({match}) => <Writer {...writers.find(writer => writer.id === match.params.writerId)}  />} />
