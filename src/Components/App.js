@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 import Writers from './Writers';
+import {NotFound} from './Error'
 
 export default class extends Component {
   state = {
@@ -8,7 +9,7 @@ export default class extends Component {
   }
 
 async componentDidMount(){
-    const writers = await (await fetch('http://localhost:3002/writers')).json();
+    const writers = await (await fetch('http://localhost:3002/writers?_embed=texts')).json();
     this.setState({writers});
     // fetch('http://localhost:3002/writers')
     // .then(res => res.json())
@@ -30,8 +31,13 @@ async componentDidMount(){
             </li>
           </ul>
           <hr />
-          <Route exact path="/" render={() =>  <div>Home</div>} />
-          <Route path="/writers" render={props => <Writers {...props} writers = { writers } />} />         
+          <Switch>
+            <Route exact path="/" render={() =>  <div>Home</div>} />
+            <Route path="/writers" render={props => <Writers {...props} writers = { writers } />} />
+            <Route render={() => <h3>Not Found</h3>} /> 
+            <Route component={NotFound} />                 
+          </Switch>
+          
         </Fragment>      
       </BrowserRouter>
     )
