@@ -14,7 +14,7 @@ export default ({match:{url}, name, born, deceased, description, image, texts}) 
            {texts.map(({ id, title }) => <li key={id}><Link to={`${url}/texts/${id}`}>{title}</Link></li>)}
        </ul>
 
-       <Route path={`${url}/texts/:textId`} render={
+       <Route path={`${url}/texts/:textId`} render={ 
            props => {
                const text = texts.find(({ id }) => id === props.match.params.textId)
                if(!text) {

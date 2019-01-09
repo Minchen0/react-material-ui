@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
 import Writers from './Writers';
 import {NotFound} from './Error'
+import Layout from './Layout'
 
 export default class extends Component {
   state = {
@@ -21,8 +22,8 @@ async componentDidMount(){
 
     return (
       <BrowserRouter>
-        <Fragment>
-          <ul>
+        <Layout writers = {writers}>
+          {/* <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -30,7 +31,7 @@ async componentDidMount(){
               <Link to="/writers">Writers</Link>
             </li>
           </ul>
-          <hr />
+          <hr /> */}
           <Switch>
             <Route exact path="/" render={() =>  <div>Home</div>} />
             <Route path="/writers" render={props => <Writers {...props} writers = { writers } />} />
@@ -38,7 +39,7 @@ async componentDidMount(){
             <Route component={NotFound} />                 
           </Switch>
           
-        </Fragment>      
+        </Layout>      
       </BrowserRouter>
     )
     
