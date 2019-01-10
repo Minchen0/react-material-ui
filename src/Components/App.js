@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Writers from './Writers';
 import {NotFound} from './Error'
 import Layout from './Layout'
